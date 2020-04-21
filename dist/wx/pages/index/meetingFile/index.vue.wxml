@@ -1,0 +1,26 @@
+<template name="a6514a1c">
+  <view class="_div data-v-24d6c1d8 meetingFile">
+    <view class="_div data-v-24d6c1d8 fileWrap {{[roles === 1 ? 'isRoles' : '']}}">
+      <view class="_div data-v-24d6c1d8 title">
+        <view class="_i data-v-24d6c1d8"></view><label class="_span data-v-24d6c1d8">会议材料</label>
+        <view class="_b data-v-24d6c1d8">共{{fileList.length}}份</view>
+      </view>
+      <view class="_div data-v-24d6c1d8 content">
+        <view class="_div data-v-24d6c1d8 fileList" wx:key="index" key="{{index}}" catchtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{fileList}}" wx:for-index="index" wx:for-item="item">
+          <view class="_i data-v-24d6c1d8 fileIcon"></view><label class="_span data-v-24d6c1d8 fileName">{{item.fileName || ''}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-24d6c1d8 fileWrap {{[roles === 1 ? 'isRoles' : '']}}">
+      <view class="_div data-v-24d6c1d8 title">
+        <view class="_i data-v-24d6c1d8"></view><label class="_span data-v-24d6c1d8">我的材料</label>
+        <view class="_b data-v-24d6c1d8">共{{myFileList.length}}份</view>
+      </view>
+      <view class="_div data-v-24d6c1d8 content">
+        <view class="_div data-v-24d6c1d8 fileList" wx:key="index" key="{{index}}" catchtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{myFileList}}" wx:for-index="index" wx:for-item="item">
+          <view class="_i data-v-24d6c1d8 fileIcon"></view><label class="_span data-v-24d6c1d8 fileName">{{item.fileName || ''}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

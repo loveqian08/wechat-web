@@ -1,0 +1,20 @@
+<import src="/components/myScroll.vue.wxml" /><template name="35da0094">
+  <view class="_div data-v-5f5150ec chooseFile">
+    <view class="_div data-v-5f5150ec tab">
+      <view class="_div data-v-5f5150ec collection"><label class="_span data-v-5f5150ec">收藏文件</label></view>
+      <view class="_div data-v-5f5150ec chat"><label bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_span data-v-5f5150ec">聊天文件</label></view>
+    </view>
+    <view class="_div data-v-5f5150ec searchWrap">
+      <view class="_div data-v-5f5150ec search">
+        <view class="_i data-v-5f5150ec"></view><input type="text" value="{{keyword}}" bindinput="handleProxy" placeholder="搜索文件" placeholder-style="font-size: 14px;font-family:PingFang SC;font-weight:400;color:#999;" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_input data-v-5f5150ec" />
+      </view>
+      <view class="_div data-v-5f5150ec isOk" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">确定</view>
+    </view>
+    <view class="_div data-v-5f5150ec listWrap"><template bindscrolltoupper="handleProxy" bindscrolltolower="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root, $for:{default:'data-v-5f5150ec-default-1',loading:'data-v-5f5150ec-loading-1'},$slotdefault:'data-v-5f5150ec-default-1',$slotloading:'data-v-5f5150ec-loading-1'}}" is="0955c234"></template></view>
+    <view class="_div data-v-5f5150ec zhezhao" wx:if="{{openSrc}}"></view>
+    <view class="_div data-v-5f5150ec imgWrap" wx:key="idx" key="{{idx}}" hidden="{{!(openSrc === tmp)}}" wx:for="{{imgList}}" wx:for-index="idx" wx:for-item="tmp">
+      <image src="{{tmp}}" alt catchtap="handleProxy" bindload="handleProxy" data-eventid="{{'6_'+idx}}" data-comkey="{{$k}}" class="_img data-v-5f5150ec"></image>
+    </view>
+    <van-notify id="van-notify" class="_van-notify data-v-5f5150ec"></van-notify>
+  </view>
+</template>

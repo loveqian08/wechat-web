@@ -1,0 +1,86 @@
+<template name="ffb53c0a">
+  <view class="_div data-v-acc69b5a addWrap">
+    <view class="_div data-v-acc69b5a home">
+      <view class="_div data-v-acc69b5a title">
+        <view class="_i data-v-acc69b5a"></view><label class="_span data-v-acc69b5a">会议主题</label>
+      </view>
+      <view class="_div data-v-acc69b5a {{[true ? 'content' : '', isfocus ? 'isfocus' : '']}}"><input type="text" placeholder="请输入会议主题" maxlength="{{20}}" value="{{meetingName}}" bindinput="handleProxy" bindfocus="handleProxy" bindblur="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-acc69b5a" />
+        <view hidden="{{!(isfocus && meetingName.length > 0)}}" class="_i data-v-acc69b5a">{{meetingName.length}}/20</view>
+      </view>
+    </view>
+    <view class="_div data-v-acc69b5a timeWrap">
+      <view class="_div data-v-acc69b5a title">
+        <view class="_i data-v-acc69b5a"></view><label class="_span data-v-acc69b5a">会议时间</label>
+      </view>
+      <view class="_div data-v-acc69b5a content" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"><label class="_span data-v-acc69b5a">{{meetingTime}}</label>
+        <view class="_i data-v-acc69b5a next"></view>
+      </view>
+    </view>
+    <view class="_div data-v-acc69b5a person">
+      <view class="_div data-v-acc69b5a title">
+        <view class="_i data-v-acc69b5a"></view><label class="_span data-v-acc69b5a">参会人员</label>
+        <view class="_b data-v-acc69b5a">已添加{{personLength}}人</view>
+      </view>
+      <view class="_div data-v-acc69b5a content">
+        <view class="_ul data-v-acc69b5a list">
+          <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}" wx:for="{{personList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-acc69b5a {{[index % 8 === 0 ? 'first' : '']}}">
+            <view class="_div data-v-acc69b5a wrap {{[item.type === 'add' ? 'add' : '', item.type === 'del' ? 'del' : '']}}" bindtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}">
+              <image src="{{item.avatar}}" alt class="_img data-v-acc69b5a"></image>
+            </view>
+            <view class="_div data-v-acc69b5a name" wx:if="{{item.name}}">{{item.name}}</view>
+          </view>
+        </view>
+        <view class="_div data-v-acc69b5a getAll" bindtap="handleProxy" wx:if="{{personList.length > 16}}" data-eventid="{{'4'}}" data-comkey="{{$k}}">查看全部人员</view>
+      </view>
+    </view>
+    <view class="_div data-v-acc69b5a fileWrap">
+      <view class="_div data-v-acc69b5a title">
+        <view class="_i data-v-acc69b5a"></view><label class="_span data-v-acc69b5a">会议材料</label>
+        <view bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_b data-v-acc69b5a">已添加{{fileList.length}}份，继续添加<view class="_i data-v-acc69b5a"></view>
+        </view>
+      </view>
+      <view class="_div data-v-acc69b5a content">
+        <view class="_div data-v-acc69b5a addFile" wx:if="{{fileList.length === 0}}" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}">
+          <view class="_i data-v-acc69b5a"></view>
+        </view>
+        <view class="_div data-v-acc69b5a fileList" wx:key="index" key="{{index}}" wx:for="{{fileList}}" wx:for-index="index" wx:for-item="item">
+          <view class="_i data-v-acc69b5a fileIcon"></view><label class="_span data-v-acc69b5a fileName">{{item.fileName}}</label>
+          <view class="_i data-v-acc69b5a delete" bindtap="handleProxy" data-eventid="{{'7_'+index}}" data-comkey="{{$k}}"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-acc69b5a okWrap"><button bindtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_button data-v-acc69b5a">确定新建</button></view>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-acc69b5a"></van-dialog>
+    <van-notify id="van-notify" class="_van-notify data-v-acc69b5a"></van-notify>
+    <van-popup show="{{showPop}}" position="bottom" bindclose="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}" class="_van-popup data-v-acc69b5a">
+      <van-datetime-picker type="datetime" value="{{currentDate}}" min-date="{{minDate}}" max-date="{{maxDate}}" bindinput="handleProxy" bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_van-datetime-picker data-v-acc69b5a"></van-datetime-picker>
+    </van-popup>
+    <van-popup show="{{showPerson}}" position="bottom" close-on-click-overlay custom-style="height: 80%;" class="_van-popup data-v-acc69b5a">
+      <view class="_div data-v-acc69b5a popWrap">
+        <view class="_div data-v-acc69b5a title">
+          <view class="_div data-v-acc69b5a iptWrap" wx:if="{{!getAllPeo}}">
+            <view class="_i data-v-acc69b5a search"></view> <input type="text" value="{{personName}}" bindinput="handleProxy" placeholder="在通讯录里查找" data-eventid="{{'11'}}" data-comkey="{{$k}}" class="_input data-v-acc69b5a" />
+          </view>
+          <view class="_div data-v-acc69b5a allPeoTitle" wx:if="{{getAllPeo}}"><label class="_span data-v-acc69b5a">全部参会人员</label></view>
+          <view class="_div data-v-acc69b5a count">已选{{chooseList.length}}人</view>
+        </view>
+        <view class="_div data-v-acc69b5a listWrap">
+          <view class="_div data-v-acc69b5a list" wx:key="idx" key="{{idx}}" wx:for="{{letterList}}" wx:for-index="idx" wx:for-item="temp">
+            <view class="_div data-v-acc69b5a type">{{temp}}</view>
+            <view class="_div data-v-acc69b5a perList">
+              <view class="_div data-v-acc69b5a people" wx:key="index" key="{{index}}" wx:if="{{it.firstLetter === temp}}" wx:for="{{peoList}}" wx:for-index="index" wx:for-item="it">
+                <view class="_div data-v-acc69b5a nameWrap">
+                  <image src="{{it.avatar}}" alt class="_img data-v-acc69b5a"></image><label class="_span data-v-acc69b5a">{{it.name}}</label>
+                </view>
+                <view class="_div data-v-acc69b5a check" wx:if="{{!getAllPeo}}">
+                  <van-checkbox value="{{it.check}}" shape="square" bindchange="handleProxy" wx:if="{{type === 'add'}}" data-eventid="{{'12_'+idx+'-'+index}}" data-comkey="{{$k}}" class="_van-checkbox data-v-acc69b5a"></van-checkbox><label wx:if="{{type === 'del'}}" bindtap="handleProxy" data-eventid="{{'13_'+idx+'-'+index}}" data-comkey="{{$k}}" class="_span data-v-acc69b5a"></label>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-acc69b5a foot"><button bindtap="handleProxy" data-eventid="{{'14'}}" data-comkey="{{$k}}" class="_button data-v-acc69b5a">确定</button></view>
+      </view>
+    </van-popup>
+  </view>
+</template>

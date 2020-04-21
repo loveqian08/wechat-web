@@ -1,0 +1,17 @@
+<template name="e8ccddde">
+  <view class="_div data-v-6752559a audioDetail">
+    <view class="_div data-v-6752559a detailHead">
+      <view class="_div data-v-6752559a info">
+        <view class="_div data-v-6752559a title">{{info.name}}</view>
+        <view class="_div data-v-6752559a time">{{info.createTime}}</view>
+      </view>
+    </view>
+    <view class="_div data-v-6752559a detailContent">
+      <view class="_div data-v-6752559a noData" wx:if="{{!info.memo && requested}}">
+        <image src="{{noData}}" class="_img data-v-6752559a"></image> <label class="_span data-v-6752559a">暂无数据</label>
+      </view>
+      <view class="_div data-v-6752559a content" wx:if="{{info.memo !== null}}">{{info.memo}}</view>
+    </view>
+    <van-notify id="van-notify" class="_van-notify data-v-6752559a"></van-notify>
+  </view>
+</template>

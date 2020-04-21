@@ -1,0 +1,39 @@
+<template name="88361cf2">
+  <view class="_div data-v-2bb2e469 recordWrap">
+    <view class="_div data-v-2bb2e469 home">
+      <view class="_div data-v-2bb2e469 titleWrap">
+        <view class="_div data-v-2bb2e469 title">{{signDetail.meetingName}}</view>
+        <view class="_div data-v-2bb2e469 createTime">{{signDetail.meetingTime}}</view>
+      </view>
+      <view class="_div data-v-2bb2e469 seeBtn" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">查看会议材料</view>
+    </view>
+    <view class="_div data-v-2bb2e469 audioWrap">
+      <view class="_div data-v-2bb2e469 icon {{[isPlay ? 'play' : '']}}" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"></view>
+      <view class="_div data-v-2bb2e469 info">
+        <view class="_div data-v-2bb2e469 audioName">{{audioInfo.audioName}}</view>
+        <view class="_div data-v-2bb2e469 audioTime"><label class="_span data-v-2bb2e469 start">{{audioInfo.startTime}}</label> <label class="_span data-v-2bb2e469 end">{{audioInfo.endTime}}</label></view>
+        <slider step="{{1}}" value="{{sliderVal}}" backgroundColor="#ccc" activeColor="#EB3017" block-size="{{12}}" max="{{duration}}" bindchange="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_slider data-v-2bb2e469" />
+      </view>
+    </view>
+    <view class="_div data-v-2bb2e469 tagWrap">
+      <van-tabs active="{{activeIndex}}" animated swipeable bindchange="handleProxy" nav-class="tabsTop" tab-class="tabOne" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-tabs data-v-2bb2e469">
+        <van-tab title="{{item.signName}}" name="{{index}}" wx:key="index" key="{{index}}" custom-class="theTab" wx:for="{{signDetail.signList}}" wx:for-index="index" wx:for-item="item" class="_van-tab data-v-2bb2e469">
+          <view class="_div data-v-2bb2e469 contentWrap">
+            <view class="_div data-v-2bb2e469 content {{[item.getMore ? 'autoContent' : '']}}">
+              <view id="text" class="_div data-v-2bb2e469">{{item.content}}</view>
+            </view>
+            <view class="_div data-v-2bb2e469 seeMore" hidden="{{!(hasMore)}}" bindtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}">
+              {{item.moreText}}
+              <view class="_i data-v-2bb2e469 {{[item.moreText === '收起' ? 'rota' : '']}}"></view>
+            </view>
+          </view>
+        </van-tab>
+      </van-tabs>
+    </view>
+    <view class="_div data-v-2bb2e469 picWrap">
+      <view class="_div data-v-2bb2e469 main" wx:key="index" key="{{index}}" wx:for="{{imgList}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.url}}" alt class="_img data-v-2bb2e469"></image>
+      </view>
+    </view>
+  </view>
+</template>

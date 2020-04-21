@@ -1,0 +1,103 @@
+<import src="/components/myNote.vue.wxml" />
+<import src="/components/audioNote.vue.wxml" />
+<import src="/components/myFile.vue.wxml" />
+<import src="/components/myScroll.vue.wxml" />
+<template name="data-v-5e967fcc-default-1">
+  <view class="_ul data-v-5e967fcc">
+    <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'7_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_li data-v-5e967fcc">
+      <view class="_div data-v-5e967fcc title"><label class="_span data-v-5e967fcc">{{item.meetingName}}</label>
+        <view class="_i data-v-5e967fcc more" catchtap="handleProxy" data-eventid="{{'6_'+index}}" data-comkey="{{$k}}"><label class="_span data-v-5e967fcc action" hidden="{{!(actionIdx === index && isOpen && item.voiceWordsJson)}}"><label class="_span data-v-5e967fcc delete" catchtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}">
+              <view class="_i data-v-5e967fcc"></view> <label class="_span data-v-5e967fcc">删除会议</label>
+            </label> <label class="_span data-v-5e967fcc line"></label> <label class="_span data-v-5e967fcc detail" catchtap="handleProxy" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}">
+              <view class="_i data-v-5e967fcc"></view> <label class="_span data-v-5e967fcc">查看会议详情</label>
+            </label></label> <label class="_span data-v-5e967fcc action2" hidden="{{!(actionIdx === index && isOpen && !item.voiceWordsJson)}}"><label class="_span data-v-5e967fcc delete" catchtap="handleProxy" data-eventid="{{'5_'+index}}" data-comkey="{{$k}}">
+              <view class="_i data-v-5e967fcc"></view> <label class="_span data-v-5e967fcc">删除会议</label>
+            </label></label></view>
+      </view>
+      <view class="_div data-v-5e967fcc info"><label class="_span data-v-5e967fcc time">{{item.meetingTime}}</label> <label class="_span data-v-5e967fcc person">
+          <view class="_i data-v-5e967fcc"></view>
+          <view class="_b data-v-5e967fcc">{{item.peopleNum}}</view>
+        </label> <label class="_span data-v-5e967fcc share">
+          <view class="_i data-v-5e967fcc"></view>
+          <view class="_b data-v-5e967fcc">{{item.fileNum}}</view>
+        </label></view>
+      <view class="_div data-v-5e967fcc content" wx:if="{{item.signCount}}">{{item.content}}</view>
+      <view class="_div data-v-5e967fcc content" wx:if="{{!item.signCount}}">暂无会议记录</view>
+    </view>
+  </view>
+</template>
+<template name="data-v-5e967fcc-loading-1">
+  <view class="_p data-v-5e967fcc loading"></view>
+</template>
+<template name="data-v-5f5150ec-default-1">
+  <view class="_ul data-v-5f5150ec">
+    <view wx:key="index" key="{{index}}" wx:for="{{fileList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-5f5150ec">
+      <view class="_div data-v-5f5150ec information" bindtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}">
+        <view class="_div data-v-5f5150ec title">{{item.fileName}}</view>
+        <view class="_div data-v-5f5150ec info"><label class="_span data-v-5f5150ec time">{{item.createTime}}</label> <label class="_span data-v-5f5150ec saveTo">{{item.source}}</label></view>
+        <view class="_div data-v-5f5150ec fromWrap"><label class="_span data-v-5f5150ec size">大小： {{item.size}}</label></view>
+      </view>
+      <view class="_div data-v-5f5150ec check" bindtap="handleProxy" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}">
+        <view class="_i data-v-5f5150ec {{[item.isCheck ? 'checkActive' : '']}}"></view>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="data-v-5f5150ec-loading-1">
+  <view class="_p data-v-5f5150ec loading"></view>
+</template>
+<template name="data-v-515fad46-default-1">
+  <view class="_ul data-v-515fad46">
+    <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_li data-v-515fad46">
+      <view class="_div data-v-515fad46 title"><label wx:if="{{item.name}}" class="_span data-v-515fad46">{{item.name}}</label><label wx:else class="_span data-v-515fad46">{{item.createTime}}</label>
+        <view class="_i data-v-515fad46 more" catchtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}"><label class="_span data-v-515fad46 action" hidden="{{!(actionIdx === index && isOpen)}}"><label class="_span data-v-515fad46 delete" catchtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}">
+              <view class="_i data-v-515fad46"></view> <label class="_span data-v-515fad46">删除笔记</label>
+            </label> <label class="_span data-v-515fad46 line"></label> <label class="_span data-v-515fad46 detail" catchtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}">
+              <view class="_i data-v-515fad46"></view> <label class="_span data-v-515fad46">分享到微信</label>
+            </label></label></view>
+      </view>
+      <view class="_div data-v-515fad46 info"><label class="_span data-v-515fad46 time">{{item.updateTime}}</label></view>
+      <view class="_div data-v-515fad46 content" wx:if="{{item.memo}}">{{item.memo}}</view>
+    </view>
+  </view>
+</template>
+<template name="data-v-515fad46-loading-1">
+  <view class="_p data-v-515fad46 loading"></view>
+</template>
+<template name="data-v-31cbee99-default-1">
+  <view class="_ul data-v-31cbee99">
+    <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_li data-v-31cbee99">
+      <view class="_div data-v-31cbee99 title"><label wx:if="{{item.name}}" class="_span data-v-31cbee99">{{item.name}}</label><label wx:else class="_span data-v-31cbee99">{{item.createTime}}</label>
+        <view class="_i data-v-31cbee99 more" catchtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}"><label class="_span data-v-31cbee99 action" hidden="{{!(actionIdx === index && isOpen)}}"><label class="_span data-v-31cbee99 delete" catchtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}">
+              <view class="_i data-v-31cbee99"></view> <label class="_span data-v-31cbee99">删除笔记</label>
+            </label> <label class="_span data-v-31cbee99 line"></label> <label class="_span data-v-31cbee99 detail" catchtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}">
+              <view class="_i data-v-31cbee99"></view> <label class="_span data-v-31cbee99">分享到微信</label>
+            </label></label></view>
+      </view>
+      <view class="_div data-v-31cbee99 info"><label class="_span data-v-31cbee99 time">{{item.updateTime}}</label></view>
+      <view class="_div data-v-31cbee99 content" wx:if="{{item.memo}}">{{item.memo}}</view>
+    </view>
+  </view>
+</template>
+<template name="data-v-31cbee99-loading-1">
+  <view class="_p data-v-31cbee99 loading"></view>
+</template>
+<template name="data-v-b09341ba-default-1">
+  <view class="_ul data-v-b09341ba">
+    <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'5_'+index}}" data-comkey="{{$k}}" wx:for="{{fileList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-b09341ba">
+      <view class="_div data-v-b09341ba information">
+        <view class="_div data-v-b09341ba title">{{item.fileName}}</view>
+        <view class="_div data-v-b09341ba info"><label class="_span data-v-b09341ba time">{{item.createTime}}</label> <label class="_span data-v-b09341ba saveTo">{{item.source}}</label></view>
+        <view class="_div data-v-b09341ba fromWrap"><label class="_span data-v-b09341ba size">大小： {{item.size}}k</label></view>
+      </view>
+      <view class="_div data-v-b09341ba more" catchtap="handleProxy" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}"><label class="_span data-v-b09341ba action" hidden="{{!(actionIdx === index && isOpen)}}"><label class="_span data-v-b09341ba delete" catchtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}">
+            <view class="_i data-v-b09341ba"></view> <label class="_span data-v-b09341ba">删除文件</label>
+          </label> <label class="_span data-v-b09341ba line"></label> <label class="_span data-v-b09341ba detail" bindtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}">
+            <view class="_i data-v-b09341ba"></view> <label class="_span data-v-b09341ba">分享到微信</label>
+          </label></label></view>
+    </view>
+  </view>
+</template>
+<template name="data-v-b09341ba-loading-1">
+  <view class="_p data-v-b09341ba loading"></view>
+</template>

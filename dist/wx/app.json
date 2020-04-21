@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/initPage/main",
+    "pages/index/main",
+    "pages/myInfo/main",
+    "pages/login/main",
+    "pages/notes/main",
+    "pages/index/meetingDetail/main",
+    "pages/login/forgetPass/main",
+    "pages/index/chooseFile/main",
+    "pages/index/addMeeting/main",
+    "pages/index/meetingRecord/main",
+    "pages/index/meetingFile/main",
+    "pages/index/fileDetail/main",
+    "pages/myInfo/personInfo/main",
+    "pages/myInfo/resetLogin/main",
+    "pages/myInfo/updateName/main",
+    "pages/myInfo/updatePass/main",
+    "pages/notes/noteDetail/main",
+    "pages/notes/audioDetail/main"
+  ],
+  "tabBar": {
+    "color": "#111",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#DE2910",
+    "borderStyle": "white",
+    "list": [{
+      "text": "会议",
+      "pagePath": "pages/index/main",
+      "iconPath": "static/tabs/meeting.png",
+      "selectedIconPath": "static/tabs/meeting_active.png"
+    }, {
+      "text": "笔记",
+      "pagePath": "pages/notes/main",
+      "iconPath": "static/tabs/note.png",
+      "selectedIconPath": "static/tabs/note_active.png"
+    },
+    {
+      "text": "我的",
+      "pagePath": "pages/myInfo/main",
+      "iconPath": "static/tabs/myInfo.png",
+      "selectedIconPath": "static/tabs/myInfo_active.png"
+    }],
+    "position": "bottom"
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#DE2910",
+    "navigationBarTitleText": "党政办公学习平台"
+  },
+  "component": true,
+  "usingComponents": {
+    "van-datetime-picker": "/vant-webapp/datetime-picker/index",
+    "van-popup": "/vant-webapp/popup/index",
+    "van-checkbox": "/vant-webapp/checkbox/index",
+    "van-dialog": "/vant-webapp/dialog/index",
+    "van-tab": "/vant-webapp/tab/index",
+    "van-tabs": "/vant-webapp/tabs/index",
+    "van-overlay": "/vant-webapp/overlay/index",
+    "van-radio": "/vant-webapp/radio/index",
+    "van-radio-group": "/vant-webapp/radio-group/index",
+    "van-notify": "/vant-webapp/notify/index",
+    "van-overlay": "/vant-webapp/overlay/index",
+    "x-scroll-view": "/vant-webapp/xing-components/x-scroll-view"
+  }
+}

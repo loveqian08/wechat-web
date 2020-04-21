@@ -1,0 +1,33 @@
+const root = 'https://suji.learndar.com/api/mini/'
+export default {
+  GET_MEETING_LIST: `${root}meetingSign/queryMeeting`, // 获取会议列表
+  DEL_MEETING: `${root}meeting/deleteMeeting`, // 删除会议
+  ADD_MEETING: `${root}meeting/creatMeeting`, // 新建会议
+  GET_USER_LIST: `${root}user/queryMailList`, // 选取参会人员
+  MEETING_DETAIL: `${root}meeting/meetingInfo`, // 会议详情
+  UPDATA_MEETING: `${root}meeting/updateMeeting`, // 编辑修改会议
+  GET_FILE_LIST: `${root}meeting/fileList`, // 获取文件列表
+  EXPORT_MEETING: `${root}meeting/export`, // 会议记录导出
+  GET_SIGN_DETAIL: `${root}meetingSign/signDetail`, // 获取会议标记
+  GET_MEETING_FILE: `${root}meetingFile/materialList`, // 获取会议文件列表
+  GET_FILE_DETAIL: `${root}meetingFile/materialDetail`, // 文件详情
+  SAVE_FILE_CHOOSE: `${root}meeting/personalFile`, // 保存选择的文件
+  USER_LOGIN: `${root}user/login`, // 用户登录
+  FAST_LOGIN: `${root}user/loginByWx`, // 微信快捷登录
+  UPLOAD_CHAT_FILE: `${root}meeting/saveFileList`, // 保存微信聊天文件
+  CHECK_SMS_CODE: `${root}user/forgetPassword`, // 验证验证码
+  SEND_SMS_CODE: `${root}common/sendMsg`, // 发送验证码
+  UPDATE_PASS: `${root}user/modifyPassword`, // 修改密码
+  UPDATE_MYFILE_LIST: `${root}meeting/personalFile`, // 修改我的材料列表
+  GET_NOTE_LIST: `${root}note/list`, // 获取笔记列表
+  GET_NOTE_DETAIL: `${root}note/detail`, // 获取笔记详情
+  DELETE_NOTE: `${root}note/deleteNote`, // 删除笔记
+  GET_MYFILE_LIST: `${root}collectFile/list`, // 获取收藏文件列表
+  DELETE_MYFILE: `${root}collectFile/delete`, // 删除收藏文件
+  ADD_MYFILE: `${root}collectFile/add`, // 新增收藏文件
+  EXPORT_NOTE: `${root}note/export/{uuid}`, // 导出笔记
+  UPDATE_NAME: `${root}user/modifyName`, // 修改昵称
+  UPDATE_PHOTO: `${root}user/modifyAvatar`, // 修改头像
+  LOLIN_OUT: `${root}user/logout`, // 退出登录
+  GET_PHOTO: `${root}user/updateUserInfoByWx` // 获取头像
+}

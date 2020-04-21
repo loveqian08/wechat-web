@@ -1,0 +1,12 @@
+<template name="0d905e64">
+  <view class="_div data-v-22af2126 fileDetailWrap">
+    <view class="_div data-v-22af2126 title">{{fileName}}</view>
+    <view class="_div data-v-22af2126 detailWrap">
+      <view class="_div data-v-22af2126 detail">
+        <view class="_div data-v-22af2126 pdfWrap" wx:key="index" key="{{index}}" wx:for="{{imgList}}" wx:for-index="index" wx:for-item="item">
+          <image src="{{item.imageUrl}}" alt class="_img data-v-22af2126 imgOne"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

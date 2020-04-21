@@ -1,0 +1,5 @@
+<template name="7f69f9e1">
+  <view class="_div data-v-2ec5e449 resetLogin">
+    <van-popup show="{{popShow}}" position="bottom" custom-style="height: 20%;" class="_van-popup data-v-2ec5e449"><button class="_button data-v-2ec5e449 yes">是</button><button class="_button data-v-2ec5e449 no">否</button></van-popup>
+  </view>
+</template>

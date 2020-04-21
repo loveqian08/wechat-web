@@ -1,0 +1,6 @@
+<template name="bf481770">
+  <view class="_div data-v-74288843">
+    <van-notify id="van-notify" class="_van-notify data-v-74288843"></van-notify>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-74288843"></van-dialog>
+  </view>
+</template>

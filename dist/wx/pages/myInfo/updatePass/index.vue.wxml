@@ -1,0 +1,15 @@
+<template name="5055bb01">
+  <view class="_div data-v-009cb52e passWrap">
+    <view class="_div data-v-009cb52e oldPass"><input type="text" value="{{form.oldPassword}}" bindinput="handleProxy" style="ime-mode: disabled;" placeholder="请输入原密码" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" wx:if="{{showOld}}" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-009cb52e" /> <input type="password" value="{{form.oldPassword}}" bindinput="handleProxy" placeholder="请输入原密码" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" wx:if="{{!showOld}}" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_input data-v-009cb52e" />
+      <view bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_i data-v-009cb52e {{[showOld ? 'showOld' : '']}}"></view>
+    </view>
+    <view class="_div data-v-009cb52e newPass"><input type="text" value="{{form.newPassword}}" bindinput="handleProxy" style="ime-mode: disabled;" placeholder="请输入新密码（6-18位）" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" wx:if="{{showNew}}" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_input data-v-009cb52e" /> <input type="password" value="{{form.newPassword}}" bindinput="handleProxy" placeholder="请输入新密码（6-18位）" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" wx:if="{{!showNew}}" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_input data-v-009cb52e" />
+      <view bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_i data-v-009cb52e {{[showNew ? 'showNew' : '']}}"></view>
+    </view>
+    <view class="_div data-v-009cb52e confirmPass"><input type="text" placeholder="请再次输入新密码" style="ime-mode: disabled;" value="{{form.confirmPassword}}" bindinput="handleProxy" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" wx:if="{{showConfirm}}" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_input data-v-009cb52e" /> <input type="password" placeholder="请再次输入新密码" value="{{form.confirmPassword}}" bindinput="handleProxy" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" wx:if="{{!showConfirm}}" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_input data-v-009cb52e" />
+      <view bindtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_i data-v-009cb52e {{[showConfirm ? 'showConfirm' : '']}}"></view>
+    </view> <button disabled="{{!isOk}}" bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_button data-v-009cb52e {{[isOk ? 'isOk' : '']}}">确定修改</button>
+    <van-notify id="van-notify" class="_van-notify data-v-009cb52e"></van-notify>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-009cb52e"></van-dialog>
+  </view>
+</template>

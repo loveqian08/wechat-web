@@ -1,0 +1,22 @@
+<template name="aff8d0e4">
+  <view class="_div data-v-676735a3 loginWrap">
+    <view class="_div data-v-676735a3 head">
+      <image src="{{bgImg}}" alt class="_img data-v-676735a3"></image>
+      <view class="_div data-v-676735a3 title">党政办公学习平台</view>
+    </view>
+    <view class="_div data-v-676735a3 main">
+      <view class="_div data-v-676735a3 loginForm">
+        <view class="_div data-v-676735a3 titName">登录</view>
+        <view class="_div data-v-676735a3 content">
+          <view class="_div data-v-676735a3 logo"></view>
+          <view class="_div data-v-676735a3 username"><input type="number" style="ime-mode: disabled;" maxlength="{{11}}" placeholder="请输入账号" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" value="{{form.telephone}}" bindinput="handleProxy" bindblur="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-676735a3" /></view>
+          <view class="_div data-v-676735a3 password"><input type="password" style="ime-mode: disabled;" placeholder="请输入密码" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" value="{{form.password}}" bindinput="handleProxy" wx:if="{{!showPass}}" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_input data-v-676735a3" /> <input type="text" style="ime-mode: disabled;" placeholder="请输入密码" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" value="{{form.password}}" bindinput="handleProxy" wx:if="{{showPass}}" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_input data-v-676735a3" />
+            <view bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_i data-v-676735a3 {{[showPass ? 'showPass' : '']}}"></view>
+          </view> <button bindtap="handleProxy" disabled="{{!form.telephone || !form.password}}" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_button data-v-676735a3 {{[form.telephone && form.password ? 'active' : '']}}">登录</button>
+        </view>
+      </view>
+      <van-notify id="van-notify" class="_van-notify data-v-676735a3"></van-notify>
+      <view class="_div data-v-676735a3 foot" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">忘记密码？</view>
+    </view>
+  </view>
+</template>

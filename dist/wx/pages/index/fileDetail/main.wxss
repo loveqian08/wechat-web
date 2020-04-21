@@ -1,0 +1,54 @@
+@import "../../../common/vendor.wxss";
+
+.fileDetailWrap .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110.00000000000001rpx;
+  padding-left: 32rpx;
+  line-height: 110.00000000000001rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #111;
+  background-color: #F3F3F3;
+}
+.fileDetailWrap .detailWrap {
+  position: absolute;
+  top: 110.00000000000001rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 0 26rpx;
+}
+.fileDetailWrap .detailWrap .detail {
+  width: 100%;
+  padding-top: 1rpx;
+}
+.fileDetailWrap .detailWrap .detail .pdfWrap {
+  width: 100%;
+  height: 885rpx;
+  float: left;
+  margin-top: 30rpx;
+  border: 1rpx solid #B6AFAA;
+  position: relative;
+}
+.fileDetailWrap .detailWrap .detail .pdfWrap .imgOne {
+  position: absolute;
+  top: 1rpx;
+  left: 0;
+  width: 99.5%;
+  height: 99%;
+  z-index: 1;
+}
+.fileDetailWrap .detailWrap .detail .pdfWrap .draw {
+  position: absolute;
+  top: 1rpx;
+  left: 0;
+  width: 99.5%;
+  height: 99%;
+  z-index: 2;
+}

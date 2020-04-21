@@ -1,0 +1,23 @@
+<template name="4c81d696">
+  <view class="_div data-v-0336650d noteDetailWrap">
+    <view class="_div data-v-0336650d detailHead">
+      <view class="_div data-v-0336650d info">
+        <view class="_div data-v-0336650d title">{{info.name}}</view>
+        <view class="_div data-v-0336650d time">{{info.createTime}}</view>
+      </view>
+      <view class="_div data-v-0336650d line"></view>
+      <view class="_div data-v-0336650d toText" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+        <view class="_i data-v-0336650d"></view> <label class="_span data-v-0336650d">转为文字</label>
+      </view>
+    </view>
+    <view class="_div data-v-0336650d detailContent">
+      <view class="_div data-v-0336650d noData" wx:if="{{(!list || list.length === 0) && requested}}">
+        <image src="{{noData}}" class="_img data-v-0336650d"></image> <label class="_span data-v-0336650d">暂无数据</label>
+      </view>
+      <view class="_div data-v-0336650d content">
+        <image src="{{item}}" alt wx:key="index" key="{{index}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_img data-v-0336650d"></image>
+      </view>
+    </view>
+    <van-notify id="van-notify" class="_van-notify data-v-0336650d"></van-notify>
+  </view>
+</template>

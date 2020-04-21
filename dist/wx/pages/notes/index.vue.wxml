@@ -1,0 +1,19 @@
+<import src="/components/myNote.vue.wxml" />
+<import src="/components/audioNote.vue.wxml" />
+<import src="/components/myFile.vue.wxml" /><template name="4212a8e6">
+  <view class="_div data-v-017646fb noteWrap">
+    <view class="_div data-v-017646fb tabHead">
+      <view class="_div data-v-017646fb noteWrap ali {{[activeIdx === 1 ? 'active_li' : '']}}" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"><label class="_span data-v-017646fb tab">我的笔记</label>
+        <view class="_i data-v-017646fb line" hidden="{{!(activeIdx === 1)}}"></view>
+      </view>
+      <view class="_div data-v-017646fb noteWrap ali {{[activeIdx === 2 ? 'active_li' : '']}}" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"><label class="_span data-v-017646fb tab">语音速记</label>
+        <view class="_i data-v-017646fb line" hidden="{{!(activeIdx === 2)}}"></view>
+      </view>
+      <view class="_div data-v-017646fb noteWrap ali {{[activeIdx === 3 ? 'active_li' : '']}}" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}"><label class="_span data-v-017646fb tab">收藏文件</label>
+        <view class="_i data-v-017646fb line" hidden="{{!(activeIdx === 3)}}"></view>
+      </view>
+    </view>
+    <view class="_div data-v-017646fb content"><template wx:if="{{activeIdx === 1}}" bindshareData="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0'], $root}}" is="070ed9cb"></template> <template wx:if="{{activeIdx === 2}}" bindshareData="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root}}" is="4db818eb"></template> <template wx:if="{{activeIdx === 3}}" bindshareData="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'2'], $root}}" is="7cf94a55"></template></view>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-017646fb"></van-dialog>
+  </view>
+</template>

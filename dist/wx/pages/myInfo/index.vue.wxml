@@ -1,0 +1,31 @@
+<template name="2ceb9691">
+  <view class="_div data-v-d57376d4 myInfo">
+    <view class="_div data-v-d57376d4 head">
+      <image src="{{bgImg}}" alt class="_img data-v-d57376d4"></image>
+      <view class="_div data-v-d57376d4 title">党政办公学习平台</view>
+      <view class="_div data-v-d57376d4 photo">
+        <image src="{{info.photoUrl}}" alt class="_img data-v-d57376d4"></image> <label class="_span data-v-d57376d4">{{info.name}}</label>
+      </view>
+    </view>
+    <view class="_div data-v-d57376d4 content">
+      <view class="_div data-v-d57376d4 lis" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"><label class="_span data-v-d57376d4 info"></label>
+        <view class="_div data-v-d57376d4 tabName">个人信息</view>
+        <view class="_i data-v-d57376d4 next"></view>
+      </view>
+      <view class="_div data-v-d57376d4 lis" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"><label class="_span data-v-d57376d4 pass"></label>
+        <view class="_div data-v-d57376d4 tabName">修改密码</view>
+        <view class="_i data-v-d57376d4 next"></view>
+      </view>
+      <view class="_div data-v-d57376d4 lis" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}"><label class="_span data-v-d57376d4 logout"></label>
+        <view class="_div data-v-d57376d4 tabName">退出登录</view>
+        <view class="_i data-v-d57376d4 next"></view>
+      </view>
+      <van-notify id="van-notify" class="_van-notify data-v-d57376d4"></van-notify>
+      <van-dialog id="van-dialog" class="_van-dialog data-v-d57376d4"></van-dialog>
+    </view>
+    <van-popup show="{{popShow}}" bindclose="handleProxy" position="bottom" custom-style="height: 25%;" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-popup data-v-d57376d4">
+      <view class="_div data-v-d57376d4 text">我们需要获取您的授权，关联您的微信头像</view>
+      <view class="_div data-v-d57376d4 btn"><button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_button data-v-d57376d4">授权</button></view>
+    </van-popup>
+  </view>
+</template>

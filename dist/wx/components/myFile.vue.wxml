@@ -1,0 +1,22 @@
+<import src="/components/myScroll.vue.wxml" /><template name="7cf94a55">
+  <view class="_div data-v-b09341ba myFileWrap">
+    <view class="_div data-v-b09341ba searchWrap">
+      <view class="_div data-v-b09341ba search">
+        <view class="_i data-v-b09341ba"></view><input type="text" value="{{keyWords}}" bindinput="handleProxy" placeholder="搜索文件" placeholder-style="font-size: 14px;font-family:PingFang SC;font-weight:400;color:#999;" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-b09341ba" />
+      </view>
+      <view class="_div data-v-b09341ba upLoad" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"></view>
+    </view>
+    <view class="_div data-v-b09341ba listWrap"><template bindscrolltoupper="handleProxy" bindscrolltolower="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root, $for:{default:'data-v-b09341ba-default-1',loading:'data-v-b09341ba-loading-1'},$slotdefault:'data-v-b09341ba-default-1',$slotloading:'data-v-b09341ba-loading-1'}}" is="0955c234"></template></view>
+    <view class="_div data-v-b09341ba zhezhao" wx:if="{{openSrc}}"></view>
+    <view class="_div data-v-b09341ba imgWrap" wx:key="idx" key="{{idx}}" hidden="{{!(openSrc === tmp)}}" wx:for="{{imgList}}" wx:for-index="idx" wx:for-item="tmp">
+      <image src="{{tmp}}" alt catchtap="handleProxy" bindload="handleProxy" data-eventid="{{'7_'+idx}}" data-comkey="{{$k}}" class="_img data-v-b09341ba"></image>
+    </view>
+    <van-popup show="{{popShow}}" position="bottom" custom-style="height: 30%;" class="_van-popup data-v-b09341ba">
+      <view class="_div data-v-b09341ba shareChate"><button data-name="shareBtn" open-type="share" class="_button data-v-b09341ba"></button> <label class="_span data-v-b09341ba">发送给微信好友</label></view>
+      <view class="_div data-v-b09341ba shareUrl"><button bindtap="handleProxy" class="_button data-v-b09341ba copy" data-clipboard-text="{{copyText}}" data-eventid="{{'8'}}" data-comkey="{{$k}}"></button> <label class="_span data-v-b09341ba">复制链接</label></view>
+      <view class="_div data-v-b09341ba cancel" bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}">取    消</view>
+    </van-popup>
+    <van-dialog id="van-dialog" class="_van-dialog data-v-b09341ba"></van-dialog>
+    <van-notify id="van-notify" class="_van-notify data-v-b09341ba"></van-notify>
+  </view>
+</template>

@@ -1,0 +1,26 @@
+<import src="/components/myScroll.vue.wxml" /><template name="c19a3c92">
+  <view class="_div data-v-5e967fcc meetingWrap">
+    <view class="_div data-v-5e967fcc searchWrap">
+      <view class="_i data-v-5e967fcc searchIcon"></view>
+      <view class="_i data-v-5e967fcc clearAll" hidden="{{!(keyword !== '')}}" catchtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"></view> <input type="text" placeholder="搜索会议" value="{{keyword}}" bindinput="handleProxy" placeholder-style="font-size: 12px;font-family: PingFang SC;font-weight: 400;color: #FADDD9;" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_input data-v-5e967fcc" /> <label class="_span data-v-5e967fcc addMeeting" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}"></label>
+    </view>
+    <view class="_div data-v-5e967fcc contentWrap"><template bindscrolltoupper="handleProxy" bindscrolltolower="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root, $for:{default:'data-v-5e967fcc-default-1',loading:'data-v-5e967fcc-loading-1'},$slotdefault:'data-v-5e967fcc-default-1',$slotloading:'data-v-5e967fcc-loading-1'}}" is="0955c234"></template>
+      <van-dialog id="van-dialog" class="_van-dialog data-v-5e967fcc"></van-dialog>
+    </view>
+    <van-overlay show="{{showOverLay}}" bind:click="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_van-overlay data-v-5e967fcc"></van-overlay>
+    <view class="_div data-v-5e967fcc myDialog" hidden="{{!(showOverLay)}}">
+      <view class="_div data-v-5e967fcc title">选择格式</view>
+      <view class="_div data-v-5e967fcc options">
+        <view class="_div data-v-5e967fcc type" bindtap="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}">
+          <view class="_i data-v-5e967fcc mp3"></view> <label class="_span data-v-5e967fcc">mp3</label>
+        </view>
+        <view class="_div data-v-5e967fcc type" bindtap="handleProxy" data-eventid="{{'11'}}" data-comkey="{{$k}}">
+          <view class="_i data-v-5e967fcc pdf"></view> <label class="_span data-v-5e967fcc">pdf</label>
+        </view>
+        <view class="_div data-v-5e967fcc type" bindtap="handleProxy" data-eventid="{{'12'}}" data-comkey="{{$k}}">
+          <view class="_i data-v-5e967fcc docx"></view> <label class="_span data-v-5e967fcc">docx</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

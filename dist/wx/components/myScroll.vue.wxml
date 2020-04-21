@@ -1,0 +1,23 @@
+<import src="/components/slots" /><template name="0955c234">
+  <scroll-view class="_scroll-view data-v-6b203834 scrollView {{[animateStatus ? 'animate' : '']}}" scroll-with-animation enable-back-to-top refreshing="{{refreshing}}" scroll-y="{{true}}" lower-threshold="{{lowerThreshold}}" bindtouchstart="handleProxy" bindtouchmove="handleProxy" bindtouchend="handleProxy" bindscrolltoupper="handleProxy" bindscroll="handleProxy" bindscrolltolower="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" style=" {{'transform: translateY(' + transitionY + 'px)'}}"><template name="loading"></template><template name="default"></template>
+    <view class="_div data-v-6b203834 noData" wx:if="{{(!fileList || fileList.length === 0) && requested}}">
+      <image src="{{noData}}" class="_img data-v-6b203834"></image> <label class="_span data-v-6b203834">暂无数据</label>
+    </view>
+    <view class="_div data-v-6b203834 pulldown">
+      <view wx:if="{{transitionY < 0 && !isReques && !finishEd}}" class="_div data-v-6b203834">
+        <view class="_p data-v-6b203834"> {{pullText}}</view>
+      </view>
+      <view wx:elif="{{transitionY >= 0 && !isReques && !finishEd}}" class="_div data-v-6b203834">
+        <view class="_p data-v-6b203834"> {{releaseText}}</view>
+      </view>
+      <view wx:elif="{{isReques && transitionY === 0 && !finishEd}}" class="_div data-v-6b203834 loadingWrap"><template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotloading || 'loading'}}"></template>
+        <view class="_p data-v-6b203834"> {{loadingText}}...</view>
+      </view>
+      <view wx:elif="{{finishEd && transitionY < 0 && !isReques}}" class="_div data-v-6b203834">
+        <view class="_p data-v-6b203834 iconfont icon-complete" space="nbsp"></view>
+        <view class="_p data-v-6b203834 loadingText"> {{finishText}}</view>
+      </view>
+    </view> <template data="{{...$root[$p], ...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
+    <view wx:if="{{isBottom}}" class="_div data-v-6b203834 noMore">暂无更多数据</view>
+  </scroll-view>
+</template>

@@ -1,0 +1,6 @@
+<template name="39ee80fb">
+  <view class="_div data-v-2d6b293a nameWrap">
+    <view class="_div data-v-2d6b293a name"><input type="text" value="{{myName}}" bindinput="handleProxy" placeholder="请输入真实姓名" placeholder-style="font-size: 16px;font-family: PingFang SC;font-weight: 400;color: #999999;" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-2d6b293a" /></view>
+    <van-notify id="van-notify" class="_van-notify data-v-2d6b293a"></van-notify> <button bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_button data-v-2d6b293a">确定修改</button>
+  </view>
+</template>

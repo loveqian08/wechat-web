@@ -1,0 +1,18 @@
+<import src="/components/myScroll.vue.wxml" /><template name="070ed9cb">
+  <view class="_div data-v-31cbee99 myNote">
+    <view class="_div data-v-31cbee99 searchWrap">
+      <view class="_div data-v-31cbee99 search">
+        <view class="_i data-v-31cbee99"></view><input type="text" value="{{par.keyWords}}" bindinput="handleProxy" placeholder="搜索笔记" placeholder-style="font-size: 14px;font-family:PingFang SC;font-weight:400;color:#999;" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-31cbee99" />
+      </view>
+    </view>
+    <view class="_div data-v-31cbee99 contentWrap"><template bindscrolltoupper="handleProxy" bindscrolltolower="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'1'], $root, $for:{default:'data-v-31cbee99-default-1',loading:'data-v-31cbee99-loading-1'},$slotdefault:'data-v-31cbee99-default-1',$slotloading:'data-v-31cbee99-loading-1'}}" is="0955c234"></template>
+      <van-popup show="{{popShow}}" position="bottom" custom-style="height: 30%;" class="_van-popup data-v-31cbee99">
+        <view class="_div data-v-31cbee99 shareChate"><button data-name="shareBtn" open-type="share" class="_button data-v-31cbee99"></button> <label class="_span data-v-31cbee99">发送给微信好友</label></view>
+        <view class="_div data-v-31cbee99 shareUrl"><button bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_button data-v-31cbee99"></button> <label class="_span data-v-31cbee99">复制链接</label></view>
+        <view class="_div data-v-31cbee99 cancel" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}">取    消</view>
+      </van-popup>
+      <van-dialog id="van-dialog" class="_van-dialog data-v-31cbee99"></van-dialog>
+      <van-notify id="van-notify" class="_van-notify data-v-31cbee99"></van-notify>
+    </view>
+  </view>
+</template>

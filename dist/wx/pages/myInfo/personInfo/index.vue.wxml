@@ -1,0 +1,18 @@
+<template name="58a258ea">
+  <view class="_div data-v-07fe4352 personInfo">
+    <view class="_div data-v-07fe4352 lis"><label class="_span data-v-07fe4352">我的账号</label>
+      <view class="_i data-v-07fe4352 user">{{info.telephone}}</view>
+    </view>
+    <view class="_div data-v-07fe4352 lis"><label class="_span data-v-07fe4352">所属机构</label>
+      <view class="_i data-v-07fe4352">{{info.orgName}}</view>
+    </view>
+    <view class="_div data-v-07fe4352 lis" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"><label class="_span data-v-07fe4352">修改头像</label>
+      <view class="_b data-v-07fe4352"></view>
+      <image src="{{photoUrl}}" alt class="_img data-v-07fe4352"></image>
+    </view>
+    <view class="_div data-v-07fe4352 lis" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"><label class="_span data-v-07fe4352">真实姓名</label>
+      <view class="_b data-v-07fe4352"></view>
+      <view class="_i data-v-07fe4352 name">{{info.name}}</view>
+    </view>
+  </view>
+</template>

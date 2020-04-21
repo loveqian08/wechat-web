@@ -1,0 +1,33 @@
+
+.scrollView.data-v-6b203834 {
+  height: calc(100% + 80rpx);
+}
+.scrollView .noMore.data-v-6b203834 {
+  font-size: 28.000000000000004rpx;
+  line-height: 100rpx;
+  text-align: center;
+  height: 100rpx;
+}
+.scrollView .pulldown.data-v-6b203834 {
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+}
+.scrollView .pulldown .loadingWrap.data-v-6b203834 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400rpx;
+}
+.scrollView .pulldown .loadingWrap .loadingText.data-v-6b203834 {
+  float: left;
+}
+.scrollView .pulldown ._p.data-v-6b203834 {
+  font-size: 28.000000000000004rpx;
+}
+.scrollView.animate.data-v-6b203834 {
+  transition: all 0.4s;
+}

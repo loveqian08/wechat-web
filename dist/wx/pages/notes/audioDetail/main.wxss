@@ -1,0 +1,77 @@
+@import "../../../common/vendor.wxss";
+
+.audioDetail.data-v-6752559a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.audioDetail .detailHead.data-v-6752559a {
+  height: 151rpx;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #F3F3F3;
+}
+.audioDetail .detailHead .info.data-v-6752559a {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 160rpx;
+}
+.audioDetail .detailHead .info .title.data-v-6752559a {
+  position: absolute;
+  top: 40rpx;
+  left: 32rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #111;
+}
+.audioDetail .detailHead .info .time.data-v-6752559a {
+  position: absolute;
+  bottom: 28.999999999999996rpx;
+  left: 32rpx;
+  font-size: 28.000000000000004rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #555;
+}
+.audioDetail .detailContent.data-v-6752559a {
+  position: absolute;
+  top: 151rpx;
+  left: 0rpx;
+  right: 0rpx;
+  bottom: 0;
+  overflow-y: auto;
+  padding-top: 36rpx;
+}
+.audioDetail .detailContent .noData.data-v-6752559a {
+  width: 543rpx;
+  height: 459.99999999999994rpx;
+  position: absolute;
+  top: 220.00000000000003rpx;
+  left: 72rpx;
+}
+.audioDetail .detailContent .noData ._img.data-v-6752559a {
+  width: 543rpx;
+  height: 413.99999999999994rpx;
+  float: left;
+}
+.audioDetail .detailContent .noData ._span.data-v-6752559a {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  float: left;
+  color: #333;
+  text-align: center;
+  margin-top: 8rpx;
+}
+.audioDetail .detailContent .content.data-v-6752559a {
+  width: 100%;
+  padding: 0 26rpx;
+  box-sizing: border-box;
+}
